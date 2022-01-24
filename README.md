@@ -1,2 +1,2 @@
 # React Dashboard app
-with chart.js
+using chart.js https://www.chartjs.org/

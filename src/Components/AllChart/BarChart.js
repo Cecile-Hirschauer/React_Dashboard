@@ -1,6 +1,5 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import fullData from "../../context/fulldata";
 
 export default function BarChart(props) {
 

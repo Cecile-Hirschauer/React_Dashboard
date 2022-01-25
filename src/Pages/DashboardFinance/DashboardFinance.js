@@ -3,11 +3,10 @@ import "./DashboardFinance.css";
 import BarChart from "../../Components/AllChart/BarChart";
 import LineChart from "../../Components/AllChart/LineChart";
 import { dashboardContext } from "../../context/DashboardContext";
+import PieChart from "../../Components/AllChart/PieChart";
 
 export default function DashboardFinance() {
   const { dataChart, changeYear, yearData } = useContext(dashboardContext);
-
-  console.log(dataChart, changeYear, yearData);
 
   return (
     <div className="global-container">
@@ -24,10 +23,10 @@ export default function DashboardFinance() {
       </form>
 
       <div className="dashboard-container">
-        <BarChart data={dataChart.chart1} name={"Chiffres bimestriels"} />
-        <LineChart data={dataChart.chart2} name={"Nombre d'abonnés (en milliers)"} />     
-        <LineChart data={dataChart.chart3} name={"Nombre de clients (en milliers)"} />     
-        <BarChart data={dataChart.chart4} name={"Budget marketing"} />
+        <PieChart data={dataChart.chart5} label={["Marketing", "Sécurité", "Front-End"]} />
+        <PieChart data={dataChart.chart6} label={["Marketing", "Sécurité", "Front-End"]} />
+        <PieChart data={dataChart.chart7} label={["Marketing", "Sécurité", "Front-End"]} />
+        <PieChart data={dataChart.chart8} label={["Marketing", "Sécurité", "Front-End"]} />
       </div>
     </div>
   );
